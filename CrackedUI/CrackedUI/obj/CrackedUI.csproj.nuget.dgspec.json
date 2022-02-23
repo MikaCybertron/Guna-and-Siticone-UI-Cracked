@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Verity\\RiderProjects\\CrackedUI\\CrackedUI\\CrackedUI.csproj": {}
+    "C:\\Users\\Verity\\Documents\\GitHub\\Guna-and-Siticone-UI-Cracked\\CrackedUI\\CrackedUI\\CrackedUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Verity\\RiderProjects\\CrackedUI\\CrackedUI\\CrackedUI.csproj": {
+    "C:\\Users\\Verity\\Documents\\GitHub\\Guna-and-Siticone-UI-Cracked\\CrackedUI\\CrackedUI\\CrackedUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Verity\\RiderProjects\\CrackedUI\\CrackedUI\\CrackedUI.csproj",
+        "projectUniqueName": "C:\\Users\\Verity\\Documents\\GitHub\\Guna-and-Siticone-UI-Cracked\\CrackedUI\\CrackedUI\\CrackedUI.csproj",
         "projectName": "CrackedUI",
-        "projectPath": "C:\\Users\\Verity\\RiderProjects\\CrackedUI\\CrackedUI\\CrackedUI.csproj",
+        "projectPath": "C:\\Users\\Verity\\Documents\\GitHub\\Guna-and-Siticone-UI-Cracked\\CrackedUI\\CrackedUI\\CrackedUI.csproj",
         "packagesPath": "C:\\Users\\Verity\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Verity\\RiderProjects\\CrackedUI\\CrackedUI\\obj\\",
+        "outputPath": "C:\\Users\\Verity\\Documents\\GitHub\\Guna-and-Siticone-UI-Cracked\\CrackedUI\\CrackedUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net48"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net48": {
+            "targetAlias": "net48",
             "projectReferences": {}
           }
         },
@@ -41,44 +41,36 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net48": {
+          "targetAlias": "net48",
           "dependencies": {
             "Colorful.Console": {
               "target": "Package",
               "version": "[1.2.15, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
             },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
+            "Costura.Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.7.0, )"
             },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Toolkit.Uwp.Notifications": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
         }
       }
     }

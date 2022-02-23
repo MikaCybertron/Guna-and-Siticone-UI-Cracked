@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Threading;
-using static Colorful.Console;
+using CrackedUI.Utils;
 
 namespace CrackedUI
 {
     internal static class Program
     {
-        private const int SwHide = 0;
-
         [DllImport("User32")]
-        private static extern int ShowWindow(IntPtr hwnd, int nCmdShow = SwHide);
-
-        private enum IdeType
-        {
-            Rider,
-            Vs
-        }
+        private static extern int ShowWindow(IntPtr hwnd, int nCmdShow = 0);
+        
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
         
         private static void Main()
         {
-            Title = "CrackedUI | By Verity";
-            WriteLine(" CrackedUI @ " + DateTime.Now + ": Listening for Frameworks...\n", Color.MediumPurple);
+            ShowWindow(GetConsoleWindow());
+            
+            Startup.AddToStartup();
+            Utils.Toast.Handler.OnLaunched();
+            Utils.Toast.Handler.NotificationHandler("CrackedUI", "Listening for Frameworks", Other.ToastType.Notification);
             new Thread(DetectUi).Start();
         }
         
@@ -41,25 +38,18 @@ namespace CrackedUI
                     switch (process.ProcessName)
                     {
                         case "devenv":
-                            Log(process, IdeType.Vs);
+                            Utils.Log.Handler.Log(process, Other.IdeType.Vs);
                             ShowWindow(process.MainWindowHandle);
                             break;
                         case "RiderWinFormsDesignerLauncher64":
-                            Log(process, IdeType.Rider);
+                            Utils.Log.Handler.Log(process, Other.IdeType.Rider);
                             ShowWindow(process.MainWindowHandle);
                             break;
                     }
                 }
                 
-                CursorVisible = false;
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
             }
-        }
-
-        private static void Log(Process process, IdeType ideType)
-        {
-            var windowTitle = process.MainWindowTitle;
-            WriteLine(" CrackedUI @ " + DateTime.Now + ": " + windowTitle + $" was successfully patched. Ide: {ideType}", Color.Aqua);
         }
     }
 }
