@@ -8,3 +8,8 @@ You would usually have to wait 15 seconds before it lets you close it, what this
 Due to the fact that it is hidden and not actually closed it never pop's up again until you re-open your IDE.
 
 It also adds itself to startup so you never have to run it again.
+
+### Performance
+
+I tried to make sure it wasn't eating up computer resources, I made it sleep 3 seconds each time it checks for Guna or Siticone.
+Max time it can take to patch a framework is about 3 seconds. (Better than 15).
