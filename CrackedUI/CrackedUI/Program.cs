@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
 using CrackedUI.Utils;
 
 namespace CrackedUI
@@ -18,19 +20,24 @@ namespace CrackedUI
         {
             ShowWindow(GetConsoleWindow());
             
-            Startup.AddToStartup();
             Utils.Toast.Handler.OnLaunched();
-            Utils.Toast.Handler.NotificationHandler("CrackedUI", "Listening for Frameworks", Other.ToastType.Notification);
-            new Thread(DetectUi).Start();
+            Utils.Toast.Handler.NotificationHandler("CrackedUI", "Started successfully, waiting to make Guna and/or Siticone mad.", Other.ToastType.Notification);
+            if (!Directory.Exists(Other.LogDirectory))
+            {
+                Directory.CreateDirectory(Other.LogDirectory);
+                Utils.Toast.Handler.NotificationHandler("CrackedUI", "Logs directory created.", Other.ToastType.Notification);
+            }
+            
+            Startup.AddToStartup();
+            DetectUi();
         }
         
         private static void DetectUi()
         {
             while (true)
             {
-                var processes = Process.GetProcesses();
-
-                foreach (var process in processes)
+                GC.Collect();
+                foreach (var process in Process.GetProcesses())
                 {
                     if (process.MainWindowTitle.Length == 0) continue;
                     if (process.MainWindowTitle.Contains("Microsoft Visual Studio")) continue;
@@ -47,8 +54,7 @@ namespace CrackedUI
                             break;
                     }
                 }
-                
-                Thread.Sleep(1000);
+                Thread.Sleep(3000);
             }
         }
     }
