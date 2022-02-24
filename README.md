@@ -11,5 +11,6 @@ It also adds itself to startup so you never have to run it again.
 
 ### Performance
 
-I tried to make sure it wasn't eating up computer resources, I made it sleep 3 seconds each time it checks for Guna or Siticone.
-Max time it can take to patch a framework is about 3 seconds. (Better than 15).
+I tried to make sure it wasn't eating up computer resources while also making the patching as fast a possible.
+It uses 2-4% CPU usage while running which tbh is to high for me and I want to lower it in the future.
+Every 300MS it will search for Rider/VS and attempt to patch Guna or Siticone if they're found.
