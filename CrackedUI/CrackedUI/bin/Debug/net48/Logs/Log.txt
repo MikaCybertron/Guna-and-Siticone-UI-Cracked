@@ -8,3 +8,5 @@ CrackedUI @ 23/02/2022 17:57:20: Siticone.Desktop.UI License Manager was patched
 CrackedUI @ 23/02/2022 17:58:01: Siticone.Desktop.UI License Manager was patched on the Ide: Vs
 CrackedUI @ 23/02/2022 18:00:23: Siticone.Desktop.UI License Manager was patched on the Ide: Vs
 CrackedUI @ 23/02/2022 18:08:45: Siticone.Desktop.UI License Manager was patched on the Ide: Vs
+CrackedUI @ 23/02/2022 18:34:24: Siticone.Desktop.UI License Manager was patched on the Ide: Vs
+CrackedUI @ 24/02/2022 09:48:56: Siticone.Desktop.UI License Manager was patched on the Ide: Vs
