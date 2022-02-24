@@ -54,7 +54,7 @@ namespace CrackedUI
                             break;
                     }
                 }
-                Thread.Sleep(3000);
+                Thread.Sleep(300);
             }
         }
     }
