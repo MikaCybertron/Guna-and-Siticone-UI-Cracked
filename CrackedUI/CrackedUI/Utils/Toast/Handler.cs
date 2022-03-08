@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.IO;
 using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace CrackedUI.Utils.Toast
@@ -14,11 +13,13 @@ namespace CrackedUI.Utils.Toast
                     new ToastContentBuilder().AddText(title).AddText("\n" + body).Show();
                     break;
                 case Other.ToastType.ButtonNotification:
-                    new ToastContentBuilder().AddButton(new ToastButton().AddArgument("OpenLogs").SetContent("Open Logs")).AddText(title).AddText("\n" + body).Show();
+                    new ToastContentBuilder()
+                        .AddButton(new ToastButton().AddArgument("OpenLogs").SetContent("Open Logs")).AddText(title)
+                        .AddText("\n" + body).Show();
                     break;
             }
         }
-        
+
         public static void OnLaunched()
         {
             ToastNotificationManagerCompat.OnActivated += toastArgs =>
