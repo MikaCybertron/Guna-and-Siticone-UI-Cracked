@@ -28,8 +28,7 @@ namespace CrackedUI
                 Directory.CreateDirectory(Other.LogDirectory);
                 Handler.NotificationHandler("CrackedUI", "Logs directory created.", Other.ToastType.Notification);
             }
-
-            Startup.AddToStartup();
+            
             DetectUi();
         }
 
