@@ -14,3 +14,15 @@ It also adds itself to startup so you never have to run it again.
 I tried to make sure it wasn't eating up computer resources while also making the patching as fast a possible.
 It uses 2-4% CPU usage while running which tbh is to high for me and I want to lower it in the future.
 Every 300MS it will search for Rider/VS and attempt to patch Guna or Siticone if they're found.
+
+### Usage
+
+Just build or download a release, run the executable and enjoy!
+
+Videos ->
+
+Siticone:
+https://user-images.githubusercontent.com/83372423/157508087-f6624e18-2d5e-4e3c-ac8b-7ba631fd74bc.mp4
+
+Guna:
+https://user-images.githubusercontent.com/83372423/157508377-afdd1fe0-101f-4c3b-ba0e-bd35a0f66a5d.mp4
