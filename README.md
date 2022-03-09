@@ -22,7 +22,7 @@ Just build or download a release, run the executable and enjoy!
 Videos ->
 
 Siticone:
-[![Watch the video](https://user-images.githubusercontent.com/83372423/157508087-f6624e18-2d5e-4e3c-ac8b-7ba631fd74bc.mp4)
+[![Watch the video](https://user-images.githubusercontent.com/83372423/157508087-f6624e18-2d5e-4e3c-ac8b-7ba631fd74bc.mp4)]
 
 Guna:
 https://user-images.githubusercontent.com/83372423/157508377-afdd1fe0-101f-4c3b-ba0e-bd35a0f66a5d.mp4
