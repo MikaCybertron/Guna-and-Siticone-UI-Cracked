@@ -19,7 +19,7 @@ Every 300MS it will search for Rider/VS and attempt to patch Guna or Siticone if
 
 Just build or download a release, run the executable and enjoy!
 
-Videos ->
+### Videos
 
 Siticone:
 
