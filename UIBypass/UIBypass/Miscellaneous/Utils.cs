@@ -23,7 +23,12 @@ namespace UIBypass.Miscellaneous
             enabled = !enabled;
             if(enabled)
             {
+                logging.LogMessage(Logging.LogType.Message, "Detection Started!");
                 DetectWindow();
+            }
+            else
+            {
+                logging.LogMessage(Logging.LogType.Message, "Detection Stopped!");
             }
         }
 
@@ -35,13 +40,13 @@ namespace UIBypass.Miscellaneous
                 {
                     foreach(var proccess in Process.GetProcesses())
                     {
-                        if(proccess.MainWindowTitle.ToLower().Contains("guna ui"))
+                        if(proccess.MainWindowTitle.ToLower().Contains("guna ui") && proccess.ProcessName.Contains("devenv") || proccess.ProcessName.Contains("rider64"))
                         {
                             HideWindow(proccess.MainWindowHandle, false);
                             logging.LogMessage(Logging.LogType.Message, "Patched Guna UI");
                         }
 
-                        if(proccess.MainWindowTitle.ToLower().Contains("siticone"))
+                        if(proccess.MainWindowTitle.ToLower().Contains("siticone") && proccess.ProcessName.Contains("devenv") || proccess.ProcessName.Contains("rider64"))
                         {
                             HideWindow(proccess.MainWindowHandle, false);
                             logging.LogMessage(Logging.LogType.Message, "Patched Siticone");
